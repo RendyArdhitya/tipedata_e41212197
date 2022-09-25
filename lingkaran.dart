@@ -1,10 +1,22 @@
-void main(List<String> args) {
-  double setengah, alas, tinggi;
-  setengah = 0.5;
-  alas = 20.0;
-  tinggi = 30.0;
+import 'dart:html';
 
-  var luasSegitiga = setengah * alas * tinggi;
+import 'bangundatar.dart';
 
-  print(luasSegitiga);
+class lingkaran extends bangun_datar {
+  late double r;
+  late double phi;
+
+  lingkaran(double r, double phi) {
+    this.r = r;
+    this.phi = phi;
+  }
+  @override
+  double luas() {
+    return phi * r * r;
+  }
+
+  @override
+  double keliling() {
+    return 2 * phi * r;
+  }
 }
